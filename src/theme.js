@@ -23,10 +23,10 @@ export const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       containedPrimary: {
+        border: "1px solid #007788",
         boxShadow: "none",
         "&:hover": {
           backgroundColor: "rgba(0,0,0,0)",
-          border: "1px solid #007788",
           color: "#007788"
         }
       },
