@@ -5,13 +5,13 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 
-import "../App.css";
+import "../index.css";
 
 const styles = theme => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "100vw",
+
     height: "100vh",
     alignItems: "flex-end",
     justifyContent: "center",
