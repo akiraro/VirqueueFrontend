@@ -13,17 +13,16 @@ const styles = theme => ({
     flexDirection: "column",
 
     height: "100vh",
-    alignItems: "flex-end",
+    alignItems: "center",
     justifyContent: "center",
     [theme.breakpoints.down("sm")]: {
-      alignItems: "center"
+      alignItems: "flex-end"
     }
   },
   content: {
     width: "400px",
-    marginRight: "10%",
     [theme.breakpoints.down("sm")]: {
-      margin: 0
+      marginRight: "10%"
     },
     [theme.breakpoints.down("xs")]: {
       width: "80%"

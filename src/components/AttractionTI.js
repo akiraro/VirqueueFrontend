@@ -24,6 +24,7 @@ const styles = theme => ({
 
   content: {
     width: "90%",
+    maxWidth: "1200px",
     margin: "auto",
     height: "100%",
     display: "flex",
@@ -60,7 +61,7 @@ class AttractionTI extends Component {
             {title}
           </Typography>
           <div className={classes.image}>
-            <img src={image} height="100%" />
+            <img src={image} alt={image} height="100%" />
           </div>
         </div>
       </div>

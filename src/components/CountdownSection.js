@@ -3,9 +3,10 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
-import Button from "@material-ui/core/Button";
 
 import Countdown from "react-countdown-now";
+
+import Apply from "./Apply";
 
 import "../index.css";
 
@@ -208,15 +209,18 @@ class CountdownSection extends Component {
 
           <Countdown date={date} renderer={second} />
         </div>
-
         <div className={classes.buttonContainer}>
+          <Apply />
+        </div>
+
+        {/* <div className={classes.buttonContainer}>
           <Button variant="outlined" color="primary" className={classes.button}>
             Customer
           </Button>
           <Button variant="outlined" color="primary" className={classes.button}>
             Restaurant
           </Button>
-        </div>
+        </div> */}
       </div>
     );
   }
