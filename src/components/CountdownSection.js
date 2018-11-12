@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import Hidden from "@material-ui/core/Hidden";
 import Button from "@material-ui/core/Button";
 
 import Countdown from "react-countdown-now";
@@ -52,7 +53,7 @@ const styles = theme => ({
     color: "#fff"
   },
   buttonContainer: {
-    width: "80%",
+    width: "70%",
     maxWidth: "700px",
     display: "flex",
     justifyContent: "space-around",
@@ -88,68 +89,126 @@ class CountdownSection extends Component {
 
     const day = ({ days }) => {
       return (
-        <Typography variant="h1" className={classes.countdownNumber}>
-          {days}
-        </Typography>
+        <div className={classes.countdown}>
+          <Hidden xsDown>
+            <Typography variant="h1" className={classes.countdownNumber}>
+              {days}
+            </Typography>
+            <Typography variant="h6" className={classes.countdownTitle}>
+              Days
+            </Typography>
+          </Hidden>
+          <Hidden smUp>
+            <Typography variant="h2" className={classes.countdownNumber}>
+              {days}
+            </Typography>
+            <Typography variant="body1" className={classes.countdownTitle}>
+              Days
+            </Typography>
+          </Hidden>
+        </div>
       );
     };
     const hour = ({ hours }) => {
       return (
-        <Typography variant="h1" className={classes.countdownNumber}>
-          {hours}
-        </Typography>
+        <div className={classes.countdown}>
+          <Hidden xsDown>
+            <Typography variant="h1" className={classes.countdownNumber}>
+              {hours}
+            </Typography>
+            <Typography variant="h6" className={classes.countdownTitle}>
+              Hours
+            </Typography>
+          </Hidden>
+          <Hidden smUp>
+            <Typography variant="h2" className={classes.countdownNumber}>
+              {hours}
+            </Typography>
+            <Typography variant="body1" className={classes.countdownTitle}>
+              Hours
+            </Typography>
+          </Hidden>
+        </div>
       );
     };
     const minute = ({ minutes }) => {
       return (
-        <Typography variant="h1" className={classes.countdownNumber}>
-          {minutes}
-        </Typography>
+        <div className={classes.countdown}>
+          <Hidden xsDown>
+            <Typography variant="h1" className={classes.countdownNumber}>
+              {minutes}
+            </Typography>
+            <Typography variant="h6" className={classes.countdownTitle}>
+              Minutes
+            </Typography>
+          </Hidden>
+          <Hidden smUp>
+            <Typography variant="h2" className={classes.countdownNumber}>
+              {minutes}
+            </Typography>
+            <Typography variant="body1" className={classes.countdownTitle}>
+              Minutes
+            </Typography>
+          </Hidden>
+        </div>
       );
     };
     const second = ({ seconds }) => {
       return (
-        <Typography variant="h1" className={classes.countdownNumber}>
-          {seconds}
-        </Typography>
-      );
-    };
-
-    return (
-      <div className={classes.root}>
-        <Typography variant="h3" className={classes.title} gutterBottom>
-          Join our Beta App Launch
-        </Typography>
-        <Typography variant="h5" className={classes.date}>
-          01-12-2018
-        </Typography>
-        <div className={classes.countdownContainer}>
+        <Hidden xsDown>
           <div className={classes.countdown}>
-            <Countdown date={date} renderer={day} />
-
-            <Typography variant="h6" className={classes.countdownTitle}>
-              Days
+            <Typography variant="h1" className={classes.countdownNumber}>
+              {seconds}
             </Typography>
-          </div>
-          <div className={classes.countdown}>
-            <Countdown date={date} renderer={hour} />
-            <Typography variant="h6" className={classes.countdownTitle}>
-              Hours
-            </Typography>
-          </div>
-          <div className={classes.countdown}>
-            <Countdown date={date} renderer={minute} />
-            <Typography variant="h6" className={classes.countdownTitle}>
-              Minutes
-            </Typography>
-          </div>
-          <div className={classes.countdown}>
-            <Countdown date={date} renderer={second} />
             <Typography variant="h6" className={classes.countdownTitle}>
               Seconds
             </Typography>
           </div>
+        </Hidden>
+      );
+    };
+
+    // const mobileCountdown = ({ days, hours, minutes }) => {
+    //   return { days } === 0 ? (
+    //     <div className={classes.countdownContainer}>
+    //       <Countdown date={date} renderer={day} />
+    //     </div>
+    //   ) : (
+    //     <div className={classes.countdownContainer}>
+    //       <Countdown date={date} renderer={hour} />
+    //     </div>
+    //   );
+    // };
+
+    return (
+      <div className={classes.root}>
+        <Hidden xsDown>
+          <Typography variant="h3" className={classes.title} gutterBottom>
+            Join our Beta App Launch
+          </Typography>
+          <Typography variant="h5" className={classes.date}>
+            01-12-2018
+          </Typography>
+        </Hidden>
+        <Hidden smUp>
+          <Typography variant="h5" className={classes.title} gutterBottom>
+            Join our Beta App Launch
+          </Typography>
+          <Typography variant="h6" className={classes.date}>
+            01-12-2018
+          </Typography>
+        </Hidden>
+
+        <div className={classes.countdownContainer}>
+          <Countdown date={date} renderer={day} />
+
+          <Countdown date={date} renderer={hour} />
+
+          <Countdown date={date} renderer={minute} />
+
+          <Countdown date={date} renderer={second} />
         </div>
+
         <div className={classes.buttonContainer}>
           <Button variant="outlined" color="primary" className={classes.button}>
             Customer

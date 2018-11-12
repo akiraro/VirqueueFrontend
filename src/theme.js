@@ -2,7 +2,6 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 export const theme = createMuiTheme({
   typography: {
-    // Use the system font instead of the default Roboto font.
     fontFamily: ["Montserrat", "sans - serif"],
     useNextVariants: true
   },
