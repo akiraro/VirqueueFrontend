@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Header from "./components/Header";
-import Countdown from "./components/Countdown";
+import CountdownSection from "./components/CountdownSection";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Countdown />
+        <CountdownSection />
         <Footer />
       </div>
     );
