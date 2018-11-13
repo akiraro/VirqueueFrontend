@@ -32,10 +32,11 @@ const styles = theme => ({
     textAlign: "center",
     textTransform: "uppercase",
     letterSpacing: "10px",
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.light,
     marginBottom: "1rem"
   },
   text: {
+    color: theme.palette.secondary.main,
     textAlign: "justify",
     [theme.breakpoints.down("sm")]: {
       textAlign: "center"
@@ -81,14 +82,14 @@ class Header extends Component {
             <Button
               className={classes.button}
               variant="contained"
-              color="primary"
+              color="secondary"
             >
               i'm in
             </Button>
             <Button
               className={classes.button}
               variant="outlined"
-              color="primary"
+              color="secondary"
             >
               learn more
             </Button>

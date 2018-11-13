@@ -32,9 +32,11 @@ export const theme = createMuiTheme({
       containedSecondary: {
         border: "1px solid #fff",
         boxShadow: "none",
+        color: "#004a5a",
         "&:hover": {
           backgroundColor: "rgba(0,0,0,0)",
-          color: "#007788"
+          color: "#4ca5b7",
+          border: "1px solid #4ca5b7"
         }
       },
       outlinedPrimary: {
@@ -47,9 +49,9 @@ export const theme = createMuiTheme({
       outlinedSecondary: {
         border: "1px solid #fff",
         "&:hover": {
-          border: "1px solid #fff",
-          backgroundColor: "#fff",
-          color: "#007788"
+          border: "1px solid #007788",
+          backgroundColor: "#007788",
+          color: "#fff"
         }
       }
     }

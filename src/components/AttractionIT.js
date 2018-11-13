@@ -10,6 +10,7 @@ const styles = theme => ({
     display: "flex",
     height: "500px",
     width: "100%",
+    overflow: "hidden",
     alignItems: "center",
     position: "relative"
   },
