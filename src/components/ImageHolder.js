@@ -7,25 +7,20 @@ import Hidden from "@material-ui/core/Hidden";
 const styles = theme => ({
   root: {
     display: "flex",
+    justifyContent: "center"
+  },
+  container: {
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
-    [theme.breakpoints.down("sm")]: {
-      padding: "3rem 0"
-    }
-  },
-  containerLeft: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start"
-  },
-  containerRight: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-end"
+    width: "80%",
+    maxWidth: "1100px"
   },
   containerMobile: {
     display: "flex",
     flexDirection: "column",
-    width: "100%"
+    width: "90%",
+    margin: "3rem"
   },
 
   leftText: {
@@ -62,12 +57,8 @@ const styles = theme => ({
     marginTop: "15px"
   },
   image: {
-    width: "30%",
     textAlign: "center",
-    margin: "8rem",
-    [theme.breakpoints.down("lg")]: {
-      margin: "2rem"
-    },
+    margin: "2rem",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       alignSelf: "center",
@@ -79,7 +70,6 @@ const styles = theme => ({
   },
   content: {
     letterSpacing: "0.5px",
-    width: "70%",
     display: "flex",
     flexDirection: "column"
   },
@@ -113,7 +103,7 @@ class ImageHolder extends Component {
     );
 
     const content = textImage ? (
-      <div className={classes.containerRight}>
+      <div className={classes.container}>
         <div className={classes.leftText}>
           <Typography className={classes.title} variant="h3" color="primary">
             {this.props.title}
@@ -125,7 +115,7 @@ class ImageHolder extends Component {
         </div>
       </div>
     ) : (
-      <div className={classes.containerLeft}>
+      <div className={classes.container}>
         <div className={classes.image}>
           <img src={this.props.image} height="100%" alt={this.props.image} />
         </div>
