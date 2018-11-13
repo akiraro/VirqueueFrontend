@@ -35,7 +35,7 @@ const styles = theme => ({
     justifyContent: "center",
     textAlign: "right",
     marginRight: "8rem",
-    width: "35%",
+    width: "60%",
     [theme.breakpoints.down("lg")]: {
       margin: "0 3rem"
     }
@@ -47,7 +47,7 @@ const styles = theme => ({
     justifyContent: "center",
     textAlign: "left",
     marginLeft: "8rem",
-    width: "35%",
+    width: "60%",
     [theme.breakpoints.down("lg")]: {
       margin: "0 3rem"
     }
@@ -69,8 +69,12 @@ const styles = theme => ({
       margin: "2rem"
     },
     [theme.breakpoints.down("sm")]: {
-      width: "100%",
+      width: "80%",
+      alignSelf: "center",
       margin: "0 0 15px"
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100%"
     }
   },
   content: {
@@ -97,7 +101,12 @@ class ImageHolder extends Component {
 
     const detail = children ? (
       <div className={classes.content}>
-        <Typography variant="subtitle1">{children}</Typography>
+        <Hidden smDown>
+          <Typography variant="h6">{children}</Typography>
+        </Hidden>
+        <Hidden mdUp>
+          <Typography variant="body1">{children}</Typography>
+        </Hidden>
       </div>
     ) : (
       <div style={{ display: "none" }} />
@@ -135,7 +144,7 @@ class ImageHolder extends Component {
         <Hidden mdUp>
           <div className={classes.containerMobile}>
             <div className={classes.image}>
-              <img src={this.props.image} height="75%" alt={this.props.image} />
+              <img src={this.props.image} width="40%" alt={this.props.image} />
             </div>
             <div className={classes.mobileText}>
               <Typography

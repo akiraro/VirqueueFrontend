@@ -21,6 +21,9 @@ export const theme = createMuiTheme({
   },
   overrides: {
     MuiButton: {
+      root: {
+        letterSpacing: "0.2rem"
+      },
       containedPrimary: {
         border: "1px solid #000",
         backgroundColor: "#000",

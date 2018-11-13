@@ -15,6 +15,8 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import Close from "@material-ui/icons/Close";
 
+import "../index.css";
+
 const styles = theme => ({
   root: {
     display: "flex",
@@ -29,7 +31,10 @@ const styles = theme => ({
     alignItems: "center",
     width: "100%",
     maxWidth: "600px",
-    alignSelf: "center"
+    alignSelf: "center",
+    [theme.breakpoints.down("sm")]: {
+      margin: 0
+    }
   },
   header: {
     display: "flex",
@@ -39,9 +44,12 @@ const styles = theme => ({
     width: "90%"
   },
   form: {
+    margin: "7rem 0",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    justifyContent: "center",
     width: "100%"
   },
   close: {
@@ -50,7 +58,8 @@ const styles = theme => ({
     cursor: "pointer"
   },
   title: {
-    marginBottom: "10px"
+    textTransform: "uppercase",
+    marginBottom: "2rem"
   },
   textField: {
     width: "60%",
@@ -58,11 +67,7 @@ const styles = theme => ({
   },
   button: {
     width: "60%",
-    margin: "30px 0"
-  },
-  desc: {
-    width: "50%",
-    textAlign: "center"
+    margin: "5rem 0 0"
   },
   success: {
     backgroundColor: "#3cb371"
@@ -188,10 +193,11 @@ class Apply extends Component {
             <Close onClick={this.handleClose} className={classes.close} />
           </Tooltip>
         </div>
-        <Typography className={classes.title} variant="h4">
-          Apply Now
-        </Typography>
+
         <form onSubmit={this.handleSubmit} className={classes.form}>
+          <Typography className={classes.title} variant="h4">
+            early sign up
+          </Typography>
           <TextField
             error={nameError}
             name="name"
@@ -222,11 +228,6 @@ class Apply extends Component {
             Submit
           </Button>
         </form>
-
-        <Typography variant="body1" className={classes.desc}>
-          You will be notfied through email as soon as your request is
-          processed.
-        </Typography>
       </Paper>
     );
 

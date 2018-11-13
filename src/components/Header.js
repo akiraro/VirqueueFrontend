@@ -11,7 +11,6 @@ const styles = theme => ({
   root: {
     display: "flex",
     flexDirection: "column",
-
     height: "100vh",
     alignItems: "center",
     justifyContent: "center",
@@ -36,17 +35,13 @@ const styles = theme => ({
     marginBottom: "1rem"
   },
   text: {
-    textAlign: "justify",
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center"
-    }
+    textAlign: "center",
+    fontWeight: 700
   },
   buttonContainer: {
     display: "flex",
     marginTop: "2rem",
-    [theme.breakpoints.down("sm")]: {
-      justifyContent: "center"
-    }
+    justifyContent: "center"
   },
   button: {
     width: "150px",
@@ -69,11 +64,11 @@ class Header extends Component {
             </Typography>
           </Hidden>
           <Hidden smUp>
-            <Typography variant="h4" className={classes.title}>
+            <Typography variant="h3" className={classes.title}>
               virqueue
             </Typography>
           </Hidden>
-          <Typography variant="body1" className={classes.text}>
+          <Typography variant="h6" className={classes.text}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Typography>
