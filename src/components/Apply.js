@@ -22,7 +22,7 @@ const styles = theme => ({
     width: "100%"
   },
   paper: {
-    margin: "1rem 0",
+    margin: "2rem 0",
     padding: "1rem 0",
     display: "flex",
     flexDirection: "column",
@@ -76,7 +76,7 @@ const styles = theme => ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    padding: "1rem auto"
+    padding: "0.3rem 0"
   },
   dialog: {
     height: "217vw"
@@ -163,7 +163,7 @@ class Apply extends Component {
       return !isEmpty(props.status) ? (
         props.status === 200 ? (
           <div className={classNames(classes.success, props.className)}>
-            <Typography variant="subtitle" style={{ color: "white" }}>
+            <Typography variant="subtitle2" style={{ color: "white" }}>
               {props.message}
             </Typography>
           </div>
@@ -231,6 +231,7 @@ class Apply extends Component {
     return (
       <div className={classes.root}>
         <Button
+          style={{ width: "250px" }}
           variant="outlined"
           color="secondary"
           onClick={this.handleOpen()}
