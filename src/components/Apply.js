@@ -103,19 +103,21 @@ class Apply extends Component {
       uemail: email
     };
     signUpUser(data).then(res => {
-      this.setState({
-        status: res.status,
-        message: res.message,
-        snackbar: true
-      });
-      if (res.status !== 200)
-        setTimeout(
-          () =>
-            this.setState({
-              snackbar: false
-            }),
-          3000
-        );
+      if (res) {
+        this.setState({
+          status: res.status,
+          message: res.message,
+          snackbar: true
+        });
+        if (res.status !== 200)
+          setTimeout(
+            () =>
+              this.setState({
+                snackbar: false
+              }),
+            3000
+          );
+      }
     });
   };
 

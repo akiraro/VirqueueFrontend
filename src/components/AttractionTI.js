@@ -12,7 +12,11 @@ const styles = theme => ({
     width: "100%",
     overflow: "hidden",
     alignItems: "center",
-    position: "relative"
+    position: "relative",
+    [theme.breakpoints.down("sm")]: {
+      height: "auto",
+      margin: "5rem 0"
+    }
   },
   box: {
     position: "absolute",
@@ -20,7 +24,10 @@ const styles = theme => ({
     height: "30%",
     width: "100%",
     border: "1px solid #004b5b",
-    backgroundColor: "#004b5b"
+    backgroundColor: "#004b5b",
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
+    }
   },
 
   content: {
@@ -30,7 +37,10 @@ const styles = theme => ({
     height: "100%",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column-reverse"
+    }
   },
   image: {
     height: "80%"
@@ -38,12 +48,24 @@ const styles = theme => ({
   title: {
     textTransform: "uppercase",
     color: "#4ca6b8",
-    margin: "0 2rem"
+    margin: "0 2rem",
+    [theme.breakpoints.down("sm")]: {
+      color: theme.palette.primary.dark,
+      width: "50%",
+      textAlign: "center",
+      margin: "2rem 0 0"
+    }
   },
   desc: {
     color: "#fff",
     textAlign: "right",
-    marginRight: "1rem"
+    marginRight: "1rem",
+    [theme.breakpoints.down("sm")]: {
+      color: "#000",
+      width: "50%",
+      textAlign: "center",
+      margin: "1rem 0"
+    }
   }
 });
 

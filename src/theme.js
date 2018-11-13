@@ -22,9 +22,11 @@ export const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       containedPrimary: {
-        border: "1px solid #007788",
+        border: "1px solid #000",
+        backgroundColor: "#000",
         boxShadow: "none",
         "&:hover": {
+          border: "1px solid #007788",
           backgroundColor: "rgba(0,0,0,0)",
           color: "#007788"
         }
@@ -40,7 +42,8 @@ export const theme = createMuiTheme({
         }
       },
       outlinedPrimary: {
-        border: "1px solid #007788",
+        border: "1px solid #000",
+        color: "#000",
         "&:hover": {
           backgroundColor: "#007788",
           color: "#fff"

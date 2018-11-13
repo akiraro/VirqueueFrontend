@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 
 import AttractionIT from "./AttractionIT";
 import AttractionTI from "./AttractionTI";
+import ImageHolder from "./ImageHolder";
 
 import phone from "../images/phone.png";
 
@@ -15,12 +16,13 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    width: "100%"
+    width: "100%",
+    padding: "4rem 0"
   },
 
   title: {
     textAlign: "center",
-    margin: "4rem 0",
+    marginBottom: "2rem",
     textTransform: "uppercase"
   },
   divider: {
@@ -39,25 +41,43 @@ class AttractionSection extends Component {
           What are we solving
           <div className={classes.divider} />
         </Typography>
-
-        <AttractionIT image={phone} title="quick">
+        <ImageHolder image={phone} title="quick">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."{" "}
+          aliquip ex ea commodo consequat."
+        </ImageHolder>
+        <ImageHolder textImage image={phone} title="quick">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat."
+        </ImageHolder>
+        <ImageHolder image={phone} title="quick">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat."
+        </ImageHolder>
+
+        {/* <AttractionIT image={phone} title="quick">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat."
         </AttractionIT>
         <AttractionTI image={phone} title="quick">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."{" "}
+          aliquip ex ea commodo consequat."
         </AttractionTI>
         <AttractionIT image={phone} title="quick">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."{" "}
-        </AttractionIT>
+          aliquip ex ea commodo consequat."
+        </AttractionIT> */}
       </div>
     );
   }
