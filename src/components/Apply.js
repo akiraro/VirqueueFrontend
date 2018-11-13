@@ -24,8 +24,7 @@ const styles = theme => ({
     width: "100%"
   },
   paper: {
-    margin: "2rem 0",
-    padding: "1rem 0",
+    padding: "2rem 0",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -44,7 +43,7 @@ const styles = theme => ({
     width: "90%"
   },
   form: {
-    margin: "7rem 0",
+    margin: "5rem 0",
     height: "100%",
     display: "flex",
     flexDirection: "column",

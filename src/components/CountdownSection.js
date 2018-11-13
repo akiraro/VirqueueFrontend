@@ -19,7 +19,7 @@ const styles = theme => ({
     alignItems: "center",
     justifyContent: "center",
     padding: "3rem auto",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       height: "auto",
       padding: "5rem 0"
     }
@@ -44,7 +44,7 @@ const styles = theme => ({
     flexDirection: "column",
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {
-      margin: "1rem"
+      margin: "1.5rem"
     }
   },
   countdownNumber: {
@@ -85,7 +85,7 @@ class CountdownSection extends Component {
   };
 
   render() {
-    const { classes, id } = this.props;
+    const { classes } = this.props;
     const { date } = this.state;
 
     const day = ({ days }) => {
@@ -169,8 +169,20 @@ class CountdownSection extends Component {
       );
     };
 
+    // const mobileCountdown = ({ days, hours, minutes }) => {
+    //   return { days } === 0 ? (
+    //     <div className={classes.countdownContainer}>
+    //       <Countdown date={date} renderer={day} />
+    //     </div>
+    //   ) : (
+    //     <div className={classes.countdownContainer}>
+    //       <Countdown date={date} renderer={hour} />
+    //     </div>
+    //   );
+    // };
+
     return (
-      <div className={classes.root} id={id}>
+      <div className={classes.root}>
         <Hidden xsDown>
           <Typography variant="h3" className={classes.title} gutterBottom>
             Join our Beta App Launch
