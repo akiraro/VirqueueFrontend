@@ -21,7 +21,7 @@ const styles = theme => ({
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    padding: "4rem 0",
+    padding: "5rem 0",
     position: "relative"
   },
   pngImg: {

@@ -7,14 +7,15 @@ import "../index.css";
 
 const styles = theme => ({
   root: {
+    position: "relative",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    margin: "2rem 5rem",
+    padding: "2rem 5rem",
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column-reverse",
       justifyContent: "center",
-      margin: "2rem"
+      padding: "2rem auto 3rem"
     }
   },
   text: {
@@ -27,8 +28,12 @@ const styles = theme => ({
     justifyContent: "space-around",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
-      marginBottom: "1rem"
+      marginBottom: "0.3rem"
     }
+  },
+  chromacreo: {
+    position: "absolute",
+    bottom: 0
   }
 });
 
@@ -45,7 +50,14 @@ class Footer extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Typography variant="body1" className={classes.text}>
+        <Typography
+          variant="subtitle2"
+          className={classes.chromacreo}
+          onClick={this.handleSocial("https://chromacreo.com")}
+        >
+          Powered by ChromaCreo
+        </Typography>
+        <Typography variant="h6" className={classes.text}>
           &reg; 2018 Virqueue Technologies
         </Typography>
         <div className={classes.social}>
