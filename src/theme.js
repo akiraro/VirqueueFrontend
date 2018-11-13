@@ -27,6 +27,7 @@ export const theme = createMuiTheme({
       containedPrimary: {
         border: "1px solid #000",
         backgroundColor: "#000",
+        color: "#fff",
         boxShadow: "none",
         "&:hover": {
           border: "1px solid #007788",

@@ -54,7 +54,7 @@ const styles = theme => ({
 
 class Header extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, primary, secondary } = this.props;
     return (
       <div className={classes.root} id="header">
         <div className={classes.content}>
@@ -74,6 +74,7 @@ class Header extends Component {
           </Typography>
           <div className={classes.buttonContainer}>
             <Button
+              onClick={primary}
               className={classes.button}
               variant="contained"
               color="primary"
@@ -81,6 +82,7 @@ class Header extends Component {
               i'm in
             </Button>
             <Button
+              onClick={secondary}
               className={classes.button}
               variant="outlined"
               color="primary"

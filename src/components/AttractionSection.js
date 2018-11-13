@@ -104,7 +104,7 @@ const styles = theme => ({
 
 class AttractionSection extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, id } = this.props;
 
     function PngImg(props) {
       return (
@@ -117,7 +117,7 @@ class AttractionSection extends Component {
     }
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id={id}>
         <Typography variant="h3" className={classes.title}>
           What are we solving
           <div className={classes.divider} />

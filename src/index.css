@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", "sans - serif";
   font-size: 13px;
+  scroll-behavior: smooth;
 }
 
 #header {
