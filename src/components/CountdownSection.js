@@ -85,7 +85,7 @@ class CountdownSection extends Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, id } = this.props;
     const { date } = this.state;
 
     const day = ({ days }) => {
@@ -182,7 +182,7 @@ class CountdownSection extends Component {
     // };
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id={id}>
         <Hidden xsDown>
           <Typography variant="h3" className={classes.title} gutterBottom>
             Join our Beta App Launch

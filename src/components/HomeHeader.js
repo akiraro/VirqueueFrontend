@@ -134,7 +134,7 @@ const styles = theme => ({
 
 class Header extends Component {
   render() {
-    const { classes, page, color, type, backgroundColor } = this.props;
+    const { classes, page, backgroundColor, primary, secondary } = this.props;
 
     return (
       <div
@@ -182,7 +182,7 @@ class Header extends Component {
             </Typography>
             <div className={classes.buttonContainer}>
               <Button
-                // onClick={primary}
+                onClick={primary}
                 className={classes.button}
                 variant="contained"
                 color="secondary"
@@ -190,7 +190,7 @@ class Header extends Component {
                 i'm in
               </Button>
               <Button
-                // onClick={secondary}
+                onClick={secondary}
                 className={classes.button}
                 variant="outlined"
                 color="secondary"
