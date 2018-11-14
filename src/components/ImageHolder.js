@@ -79,7 +79,7 @@ const styles = theme => ({
   title: {
     letterSpacing: "2px",
     textTransform: "uppercase",
-    fontWeight: 700,
+    fontWeight: 500,
     marginBottom: "1rem"
   }
 });

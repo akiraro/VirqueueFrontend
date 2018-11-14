@@ -108,6 +108,7 @@ const styles = theme => ({
     }
   },
   text: {
+    fontWeight: 300,
     letterSpacing: "2px",
     lineHeight: "140%",
     color: "#fff",
@@ -118,7 +119,7 @@ const styles = theme => ({
     flexDirection: "column",
     padding: "2rem 0",
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "70%",
+      maxWidth: "60%",
       alignSelf: "center",
       textAlign: "center"
     },
@@ -128,6 +129,7 @@ const styles = theme => ({
   },
   title: {
     textTransform: "uppercase",
+    fontWeight: 400,
     color: theme.palette.primary.light,
     letterSpacing: "0.5rem",
     [theme.breakpoints.down("sm")]: {
@@ -200,9 +202,10 @@ class Header extends Component {
               </Typography>
             </Hidden>
             <Typography variant="h5" className={classes.text}>
-              Virqueue offers a smart food ordering system in Malaysia. You can
-              find information about a restaurant, order food and pay in the
-              smartest way.
+              Virqueue offers a smart food ordering system in Malaysia. It is
+              informative and save you time. Smartest technology to get you what
+              to eat.
+              <br /> Try us out!
             </Typography>
             <div className={classes.buttonContainer}>
               <Button

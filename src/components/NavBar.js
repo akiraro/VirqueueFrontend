@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
+import Apply from "../components/Apply";
+
 import Logo1 from "../images/Logo1.svg";
 import Logo2 from "../images/Logo2.svg";
 
@@ -10,6 +12,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     marginLeft: "2rem",
+    justifyContent: "space-between",
     alignItems: "center",
     height: "5rem",
     width: "100%"
@@ -25,9 +28,14 @@ const styles = theme => ({
     paddingRight: 0
   },
   name: {
+    letterSpacing: "1.5px",
     textTransform: "uppercase",
-    fontWeight: 700,
+    fontWeight: 500,
     padding: "1rem"
+  },
+  buttonContainer: {
+    width: "125px",
+    marginRight: "3rem"
   }
 });
 
@@ -70,6 +78,9 @@ class NavBar extends Component {
     return (
       <div className={classes.root}>
         <Logo inverted={inverted} onClick={onClickLogo} />
+        <div className={classes.buttonContainer}>
+          <Apply />
+        </div>
       </div>
     );
   }

@@ -94,6 +94,7 @@ const styles = theme => ({
     }
   },
   title: {
+    fontWeight: 500,
     textAlign: "center",
     marginBottom: "2rem",
     textTransform: "uppercase"
@@ -127,17 +128,18 @@ class AttractionSection extends Component {
         </Typography>
         <ImageHolder image={phone} title="save time">
           Your time is more precious than you actually think. Virqueue will do
-          your queuing and waiting job for you. Be there when you really need to
+          queuing and waiting jobs for you. We will inform you when you need to
           be there.
         </ImageHolder>
         <ImageHolder textImage image={phone} title="informative">
-          Find, locate, and eat. Restaurants will have their premise location,
-          business hour, menu and even their specialty ready at your fingertip
-          so you know exactly what you need before you fill your tummy.
+          Find, locate, order and eat. Restaurants will have their premise
+          locations, business hours, menu and even their specialties ready at
+          your fingertip so you know exactly what you need before you fill your
+          tummy.
         </ImageHolder>
         <ImageHolder image={phone} title="engaging">
           Communication is key to success. Get to know your premises'
-          performance based on your in-app restaurant visitor, favourites and
+          performance based on your in-app restaurant visitors, favourites and
           best sellers.
         </ImageHolder>
         <ImageHolder textImage image={phone} title="organized">
