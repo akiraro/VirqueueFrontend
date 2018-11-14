@@ -60,13 +60,10 @@ const styles = theme => ({
     textTransform: "uppercase",
     marginBottom: "2rem"
   },
-  textField: {
+
+  formAction: {
     width: "60%",
-    marginTop: "25px"
-  },
-  button: {
-    width: "60%",
-    margin: "5rem 0 0"
+    marginTop: "1.5rem"
   },
   success: {
     backgroundColor: "#3cb371"
@@ -200,7 +197,7 @@ class Apply extends Component {
           <TextField
             error={nameError}
             name="name"
-            className={classes.textField}
+            className={classes.formAction}
             variant="outlined"
             multiline
             label="Name"
@@ -211,15 +208,16 @@ class Apply extends Component {
             error={emailError}
             name="email"
             type="email"
-            className={classes.textField}
+            className={classes.formAction}
             variant="outlined"
             label="Email"
             value={email}
             onChange={this.handleChange("emailError")}
           />
           <Button
+            style={{ padding: "1rem" }}
             onClick={this.handleSubmit}
-            className={classes.button}
+            className={classes.formAction}
             variant="contained"
             color="primary"
             type="submit"

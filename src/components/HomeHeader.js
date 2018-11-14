@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-// import NavBar from "../../../common/NavBar";
+import NavBar from "./NavBar";
 
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -22,9 +22,17 @@ const styles = theme => ({
       position: "relative"
     },
     [theme.breakpoints.down("xs")]: {
-      height: "700px",
-      position: "relative"
+      height: "700px"
     }
+  },
+  navbar: {
+    position: "absolute",
+    top: 0,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "75px",
+    width: "100%"
   },
   content: {
     display: "flex",
@@ -95,7 +103,6 @@ const styles = theme => ({
     width: "90%",
     maxWidth: "300px",
     textAlign: "justify",
-    fontWeight: 700,
     display: "flex",
     flexDirection: "column",
     padding: "2rem 0",
@@ -134,18 +141,21 @@ const styles = theme => ({
 
 class Header extends Component {
   render() {
-    const { classes, page, backgroundColor, primary, secondary } = this.props;
+    const { classes, backgroundColor, primary, secondary, id } = this.props;
 
     return (
       <div
         className={classes.root}
-        id={page}
+        id={id}
         style={{
           backgroundColor: backgroundColor,
           zIndex: 0
         }}
       >
-        {/* <NavBar page={page} color={color} type={type} /> */}
+        <div className={classes.navbar}>
+          <NavBar />
+        </div>
+
         <div className={classes.content}>
           <div className={classes.columnLeft}>
             <img
@@ -185,7 +195,7 @@ class Header extends Component {
                 onClick={primary}
                 className={classes.button}
                 variant="contained"
-                color="secondary"
+                color="primary"
               >
                 i'm in
               </Button>

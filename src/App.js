@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import StickyNavBar from "./components/StickyNavBar";
+
 import HomeHeader from "./components/HomeHeader";
 import AttractionSection from "./components/AttractionSection";
 import CountdownSection from "./components/CountdownSection";
@@ -10,18 +12,25 @@ class App extends Component {
     document.getElementById(id).scrollIntoView();
   };
   render() {
-    return (
+    const header = (
       <div>
-        {/* <a href="#attraction" id="attractionLink" style={{ display: "none" }} />
-        <a href="#countdown" id="countdownLink" style={{ display: "none" }} /> */}
         <HomeHeader
+          id="header"
           primary={this.viewSection("countdown")}
           secondary={this.viewSection("attraction")}
           backgroundColor="#262626"
         />
-        <AttractionSection id="attraction" />
-        <CountdownSection id="countdown" />
-        <Footer />
+      </div>
+    );
+    return (
+      <div>
+        <StickyNavBar header={header} onClickLogo={this.viewSection("header")}>
+          <div>
+            <AttractionSection id="attraction" />
+            <CountdownSection id="countdown" />
+            <Footer />
+          </div>
+        </StickyNavBar>
       </div>
     );
   }

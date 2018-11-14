@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.513" y1="1.225" x2="0.5" y2="-0.065" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#001657"/>
+      <stop offset="0" stop-color="#003265" stop-opacity="0.906"/>
+      <stop offset="1" stop-color="#078" stop-opacity="0.667"/>
+    </linearGradient>
+  </defs>
+  <g id="Logo2" transform="translate(-32 -28)">
+    <g id="Group_2" data-name="Group 2" transform="translate(32 28)">
+      <path id="Top" class="cls-1" d="M-6.29,9.794A15.063,15.063,0,0,1,0,21.336V64L-17.111,53.333C-20.778,50.2-22,47.686-22,42.667V0" transform="translate(22)"/>
+      <path id="Top-2" data-name="Top" class="cls-1" d="M-6.29,9.794A15.063,15.063,0,0,1,0,21.336V64L-17.111,53.333C-20.778,50.2-22,47.686-22,42.667V0" transform="translate(39)"/>
+      <path id="Top-3" data-name="Top" class="cls-1" d="M-6.29,9.794A15.063,15.063,0,0,1,0,21.336V64L-17.111,53.333C-20.778,50.2-22,47.686-22,42.667V0" transform="translate(56)"/>
+    </g>
+  </g>
+</svg>
