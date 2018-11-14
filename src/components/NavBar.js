@@ -11,13 +11,15 @@ import Logo2 from "../images/Logo2.svg";
 const styles = theme => ({
   root: {
     display: "flex",
-    marginLeft: "2rem",
+    margin: "auto",
     justifyContent: "space-between",
     alignItems: "center",
     height: "5rem",
-    width: "100%"
+    width: "100%",
+    maxWidth: "1200px"
   },
   logoContainer: {
+    marginLeft: "2rem",
     cursor: "pointer",
     height: "70%",
     display: "flex",
@@ -46,6 +48,16 @@ class NavBar extends Component {
 
   render() {
     const { classes, onClickLogo, inverted } = this.props;
+
+    const button = inverted ? (
+      <div className={classes.buttonContainer}>
+        <Apply inverted />
+      </div>
+    ) : (
+      <div className={classes.buttonContainer}>
+        <Apply />
+      </div>
+    );
 
     function Logo(props) {
       return props.inverted ? (
@@ -78,9 +90,7 @@ class NavBar extends Component {
     return (
       <div className={classes.root}>
         <Logo inverted={inverted} onClick={onClickLogo} />
-        <div className={classes.buttonContainer}>
-          <Apply />
-        </div>
+        {button}
       </div>
     );
   }

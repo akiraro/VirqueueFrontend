@@ -159,7 +159,7 @@ class Apply extends Component {
   };
 
   render() {
-    const { classes, fullScreen } = this.props;
+    const { classes, fullScreen, inverted } = this.props;
     const {
       name,
       email,
@@ -190,6 +190,26 @@ class Apply extends Component {
         <div style={{ display: "none" }} />
       );
     }
+
+    const button = inverted ? (
+      <Button
+        style={{ width: "250px" }}
+        variant="contained"
+        color="primary"
+        onClick={this.handleOpen()}
+      >
+        Sign Up
+      </Button>
+    ) : (
+      <Button
+        style={{ width: "250px" }}
+        variant="outlined"
+        color="secondary"
+        onClick={this.handleOpen()}
+      >
+        Sign Up
+      </Button>
+    );
 
     const modal = (
       <Paper elevation={0} className={classes.paper}>
@@ -247,14 +267,7 @@ class Apply extends Component {
 
     return (
       <div className={classes.root}>
-        <Button
-          style={{ width: "250px" }}
-          variant="outlined"
-          color="secondary"
-          onClick={this.handleOpen()}
-        >
-          Sign Up
-        </Button>
+        {button}
         <Dialog
           open={dialog}
           scroll="body"

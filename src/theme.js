@@ -38,16 +38,16 @@ export const theme = createMuiTheme({
       //     color: "#007788"
       //   }
       // },
-      containedSecondary: {
-        border: "1px solid #fff",
-        boxShadow: "none",
-        color: "#004a5a",
-        "&:hover": {
-          border: "1px solid #4ca5b7",
-          backgroundColor: "rgba(0,0,0,0)",
-          color: "#4ca5b7"
-        }
-      },
+      // containedSecondary: {
+      //   border: "1px solid #fff",
+      //   boxShadow: "none",
+      //   color: "#004a5a",
+      //   "&:hover": {
+      //     border: "1px solid #4ca5b7",
+      //     backgroundColor: "rgba(0,0,0,0)",
+      //     color: "#4ca5b7"
+      //   }
+      // },
       outlinedPrimary: {
         border: "1px solid #000",
         color: "#000",
