@@ -45,14 +45,25 @@ class Footer extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
+        <div className={classes.social}>
+          <i
+            className="icon ion-logo-facebook"
+            onClick={this.handleSocial(
+              "https://www.facebook.com/virqueue.tech"
+            )}
+          />
+          <i
+            className="icon ion-logo-twitter"
+            onClick={this.handleSocial("https://twitter.com/virqueue")}
+          />
+          <i
+            className="icon ion-logo-instagram"
+            onClick={this.handleSocial("https://www.instagram.com/virqueue")}
+          />
+        </div>
         <Typography variant="h6" className={classes.text}>
           &reg; 2018 Virqueue Technologies
         </Typography>
-        <div className={classes.social}>
-          <i className="icon ion-logo-facebook" />
-          <i className="icon ion-logo-twitter" />
-          <i className="icon ion-logo-instagram" />
-        </div>
       </div>
     );
   }

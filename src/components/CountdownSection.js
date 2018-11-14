@@ -169,23 +169,11 @@ class CountdownSection extends Component {
       );
     };
 
-    // const mobileCountdown = ({ days, hours, minutes }) => {
-    //   return { days } === 0 ? (
-    //     <div className={classes.countdownContainer}>
-    //       <Countdown date={date} renderer={day} />
-    //     </div>
-    //   ) : (
-    //     <div className={classes.countdownContainer}>
-    //       <Countdown date={date} renderer={hour} />
-    //     </div>
-    //   );
-    // };
-
     return (
       <div className={classes.root} id={id}>
         <Hidden xsDown>
           <Typography variant="h3" className={classes.title} gutterBottom>
-            Join our Beta App Launch
+            Join our Alpha App Launch
           </Typography>
           <Typography variant="h5" className={classes.date}>
             01-12-2018
@@ -193,7 +181,7 @@ class CountdownSection extends Component {
         </Hidden>
         <Hidden smUp>
           <Typography variant="h5" className={classes.title} gutterBottom>
-            Join our Beta App Launch
+            Join our Alpha App Launch
           </Typography>
           <Typography variant="h6" className={classes.date}>
             01-12-2018
@@ -212,15 +200,6 @@ class CountdownSection extends Component {
         <div className={classes.buttonContainer}>
           <Apply />
         </div>
-
-        {/* <div className={classes.buttonContainer}>
-          <Button variant="outlined" color="primary" className={classes.button}>
-            Customer
-          </Button>
-          <Button variant="outlined" color="primary" className={classes.button}>
-            Restaurant
-          </Button>
-        </div> */}
       </div>
     );
   }

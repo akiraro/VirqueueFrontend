@@ -34,12 +34,12 @@ const styles = theme => ({
       height: "150px"
     },
     [theme.breakpoints.down("xs")]: {
-      height: "75px"
+      display: "none"
     }
   },
   fruit: {
     right: 0,
-    top: "23%",
+    top: "20%",
     [theme.breakpoints.down("md")]: {
       top: "27%"
     },
@@ -69,7 +69,10 @@ const styles = theme => ({
   },
   chicken: {
     right: 0,
-    top: "66%",
+    top: "5%",
+    [theme.breakpoints.down("md")]: {
+      top: "0%"
+    },
     [theme.breakpoints.down("sm")]: {
       top: "57%"
     },
@@ -118,27 +121,29 @@ class AttractionSection extends Component {
 
     return (
       <div className={classes.root} id={id}>
-        <Typography variant="h3" className={classes.title}>
+        <Typography variant="h4" className={classes.title}>
           What are we solving
           <div className={classes.divider} />
         </Typography>
-        <ImageHolder image={phone} title="quick">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."
+        <ImageHolder image={phone} title="save time">
+          Your time is more precious than you actually think. Virqueue will do
+          your queuing and waiting job for you. Be there when you really need to
+          be there.
         </ImageHolder>
-        <ImageHolder textImage image={phone} title="quick">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."
+        <ImageHolder textImage image={phone} title="informative">
+          Find, locate, and eat. Restaurants will have their premise location,
+          business hour, menu and even their specialty ready at your fingertip
+          so you know exactly what you need before you fill your tummy.
         </ImageHolder>
-        <ImageHolder image={phone} title="quick">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat."
+        <ImageHolder image={phone} title="engaging">
+          Communication is key to success. Get to know your premises'
+          performance based on your in-app restaurant visitor, favourites and
+          best sellers.
+        </ImageHolder>
+        <ImageHolder textImage image={phone} title="organized">
+          Restaurant management can't be more easier. Vendors can now organize
+          all their orders without having physical records hanging around their
+          premises.
         </ImageHolder>
         <PngImg image={chicken} alt="chicken" className={classes.chicken} />
         <PngImg image={coffee} alt="coffee" className={classes.coffee} />

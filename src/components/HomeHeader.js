@@ -9,6 +9,7 @@ import Hidden from "@material-ui/core/Hidden";
 
 import row_1 from "../images/row_1.png";
 import row_2 from "../images/row_2.png";
+import meat from "../images/meat.png";
 
 const styles = theme => ({
   root: {
@@ -22,7 +23,7 @@ const styles = theme => ({
       position: "relative"
     },
     [theme.breakpoints.down("xs")]: {
-      height: "700px"
+      height: "100vh"
     }
   },
   navbar: {
@@ -79,10 +80,18 @@ const styles = theme => ({
   },
   image: {
     [theme.breakpoints.down("sm")]: {
-      filter: "brightness(40%)"
+      filter: "brightness(30%)"
     },
     [theme.breakpoints.down("xs")]: {
       display: "none"
+    }
+  },
+
+  imageContainer: {
+    width: "80%",
+    marginTop: "2rem",
+    [theme.breakpoints.down("md")]: {
+      width: "88%"
     }
   },
   textContainer: {
@@ -90,7 +99,7 @@ const styles = theme => ({
     padding: "2rem",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     [theme.breakpoints.down("sm")]: {
       padding: 0,
       justifyContent: "center",
@@ -99,6 +108,8 @@ const styles = theme => ({
     }
   },
   text: {
+    letterSpacing: "2px",
+    lineHeight: "140%",
     color: "#fff",
     width: "90%",
     maxWidth: "300px",
@@ -110,6 +121,9 @@ const styles = theme => ({
       maxWidth: "70%",
       alignSelf: "center",
       textAlign: "center"
+    },
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "85%"
     }
   },
   title: {
@@ -120,11 +134,10 @@ const styles = theme => ({
       textAlign: "center"
     }
   },
-
   buttonContainer: {
     width: "95%",
     display: "flex",
-    marginTop: "2rem",
+    marginBottom: "2rem",
     [theme.breakpoints.down("sm")]: {
       alignSelf: "center",
       justifyContent: "center"
@@ -186,9 +199,10 @@ class Header extends Component {
                 virqueue
               </Typography>
             </Hidden>
-            <Typography variant="h6" className={classes.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <Typography variant="h5" className={classes.text}>
+              Virqueue offers a smart food ordering system in Malaysia. You can
+              find information about a restaurant, order food and pay in the
+              smartest way.
             </Typography>
             <div className={classes.buttonContainer}>
               <Button
@@ -208,6 +222,11 @@ class Header extends Component {
                 learn more
               </Button>
             </div>
+            <Hidden smDown>
+              <div>
+                <img src={meat} alt="meat" className={classes.imageContainer} />
+              </div>
+            </Hidden>
           </div>
         </div>
       </div>

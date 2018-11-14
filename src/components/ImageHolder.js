@@ -48,13 +48,16 @@ const styles = theme => ({
     }
   },
   mobileText: {
-    width: "80%",
+    width: "40%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     alignSelf: "center",
     textAlign: "center",
-    marginTop: "15px"
+    marginTop: "15px",
+    [theme.breakpoints.down("xs")]: {
+      width: "80%"
+    }
   },
   image: {
     textAlign: "center",
@@ -91,12 +94,7 @@ class ImageHolder extends Component {
 
     const detail = children ? (
       <div className={classes.content}>
-        <Hidden smDown>
-          <Typography variant="h6">{children}</Typography>
-        </Hidden>
-        <Hidden mdUp>
-          <Typography variant="body1">{children}</Typography>
-        </Hidden>
+        <Typography variant="h6">{children}</Typography>
       </div>
     ) : (
       <div style={{ display: "none" }} />

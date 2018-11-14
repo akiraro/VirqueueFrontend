@@ -58,12 +58,16 @@ const styles = theme => ({
   },
   title: {
     textTransform: "uppercase",
-    marginBottom: "2rem"
+    marginBottom: "1rem"
   },
-
+  desc: {
+    marginBottom: "2rem",
+    textAlign: "center",
+    width: "60%"
+  },
   formAction: {
     width: "60%",
-    marginTop: "1.5rem"
+    margin: "1rem 0"
   },
   success: {
     backgroundColor: "#3cb371"
@@ -81,6 +85,11 @@ const styles = theme => ({
   },
   dialog: {
     height: "217vw"
+  },
+  divider: {
+    margin: "0.5rem auto",
+    width: "60%",
+    borderBottom: "2px solid #007788"
   }
 });
 
@@ -193,6 +202,11 @@ class Apply extends Component {
         <form onSubmit={this.handleSubmit} className={classes.form}>
           <Typography className={classes.title} variant="h4">
             early sign up
+            <div className={classes.divider} />
+          </Typography>
+          <Typography className={classes.desc} variant="body1">
+            The app is currently in alpha stage and we need your help. Sign up
+            and be the first ones to experience the smartest way to order food.
           </Typography>
           <TextField
             error={nameError}
@@ -224,6 +238,9 @@ class Apply extends Component {
           >
             Submit
           </Button>
+          <Typography className={classes.desc} variant="body1">
+            We will notify you via email. Stay tuned!
+          </Typography>
         </form>
       </Paper>
     );
