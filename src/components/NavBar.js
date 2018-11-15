@@ -14,7 +14,7 @@ const styles = theme => ({
     margin: "auto",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "5rem",
+    height: "75px",
     width: "100%",
     maxWidth: "1200px"
   },
@@ -23,7 +23,10 @@ const styles = theme => ({
     cursor: "pointer",
     height: "70%",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "50%"
+    }
   },
   logo: {
     padding: "1rem",
@@ -36,8 +39,14 @@ const styles = theme => ({
     padding: "1rem"
   },
   buttonContainer: {
+    display: "flex",
     width: "125px",
-    marginRight: "3rem"
+    marginRight: "3rem",
+    height: "70%",
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "50%"
+    }
   }
 });
 

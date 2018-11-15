@@ -22,7 +22,8 @@ export const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        letterSpacing: "0.2rem"
+        letterSpacing: "0.2rem",
+        fontSize: "11px"
       },
       contained: {
         boxShadow: "none"

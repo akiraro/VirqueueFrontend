@@ -6,8 +6,10 @@ import Typography from "@material-ui/core/Typography";
 
 import ImageHolder from "./ImageHolder";
 
-import phone from "../images/phone.png";
-import chicken from "../images/chicken.png";
+import engaging from "../images/engaging.jpg";
+import saveTime from "../images/save-time.jpg";
+import informative from "../images/informative.jpg";
+import organized from "../images/organized.jpg";
 import coffee from "../images/coffee.png";
 import fruit from "../images/fruit.png";
 import noodles from "../images/noodles.png";
@@ -21,79 +23,54 @@ const styles = theme => ({
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    padding: "5rem 0",
+    padding: "100px 0",
     position: "relative"
   },
   pngImg: {
+    pointerEvents: "none",
     position: "absolute",
     height: "250px",
     [theme.breakpoints.down("md")]: {
       height: "200px"
     },
     [theme.breakpoints.down("sm")]: {
-      height: "150px"
-    },
-    [theme.breakpoints.down("xs")]: {
       display: "none"
     }
   },
   fruit: {
     right: 0,
     top: "20%",
-    [theme.breakpoints.down("md")]: {
-      top: "27%"
-    },
-    [theme.breakpoints.down("sm")]: {
-      top: "24%"
-    },
     [theme.breakpoints.down("xs")]: {
       top: "21%"
     }
   },
   coffee: {
     left: 0,
-    top: "35%",
-    [theme.breakpoints.down("sm")]: {
-      top: "37%"
-    },
+    top: "43%",
     [theme.breakpoints.down("xs")]: {
       top: "38%"
     }
   },
-  noodles: {
-    left: 0,
-    top: "58%",
-    [theme.breakpoints.down("sm")]: {
-      top: "68%"
-    }
-  },
-  chicken: {
-    right: 0,
-    top: "5%",
-    [theme.breakpoints.down("md")]: {
-      top: "0%"
-    },
-    [theme.breakpoints.down("sm")]: {
-      top: "57%"
-    },
-    [theme.breakpoints.down("xs")]: {
-      top: "52%"
-    }
-  },
   pie: {
     right: 0,
-    top: "88%",
+    top: "65%",
     [theme.breakpoints.down("md")]: {
-      top: "90%"
-    },
-    [theme.breakpoints.down("sm")]: {
-      top: "85%"
+      top: "67%"
     },
     [theme.breakpoints.down("xs")]: {
       top: "82%"
     }
   },
+  noodles: {
+    left: 0,
+    top: "89%",
+    [theme.breakpoints.down("sm")]: {
+      top: "90%"
+    }
+  },
+
   title: {
+    fontSize: "2.5rem",
     fontWeight: 500,
     textAlign: "center",
     marginBottom: "2rem",
@@ -123,31 +100,30 @@ class AttractionSection extends Component {
     return (
       <div className={classes.root} id={id}>
         <Typography variant="h4" className={classes.title}>
-          What are we solving
+          What do we offer
           <div className={classes.divider} />
         </Typography>
-        <ImageHolder image={phone} title="save time">
+        <ImageHolder image={saveTime} title="save time">
           Your time is more precious than you actually think. Virqueue will do
-          queuing and waiting jobs for you. We will inform you when you need to
-          be there.
+          the queuing and waiting jobs for you. We will inform you when you need
+          to be there.
         </ImageHolder>
-        <ImageHolder textImage image={phone} title="informative">
-          Find, locate, order and eat. Restaurants will have their premise
-          locations, business hours, menu and even their specialties ready at
-          your fingertip so you know exactly what you need before you fill your
+        <ImageHolder textImage image={informative} title="informative">
+          Find, locate, order, and eat. Restaurants will have their premise
+          locations, business hours, menu, and even their specialties ready at
+          your fingertips so you know exactly what you need before you fill your
           tummy.
         </ImageHolder>
-        <ImageHolder image={phone} title="engaging">
-          Communication is key to success. Get to know your premises'
-          performance based on your in-app restaurant visitors, favourites and
-          best sellers.
+        <ImageHolder image={engaging} title="engaging">
+          Communication is a key to success. Get to know your premises'
+          performance based on your in-app restaurant visitors, favourites,
+          rating, reviews, and best sellers.
         </ImageHolder>
-        <ImageHolder textImage image={phone} title="organized">
-          Restaurant management can't be more easier. Vendors can now organize
-          all their orders without having physical records hanging around their
-          premises.
+        <ImageHolder textImage image={organized} title="organized">
+          Restaurant management can't be more easier. Restaurants can now
+          organize all their orders without having physical records hanging
+          around their premises.
         </ImageHolder>
-        <PngImg image={chicken} alt="chicken" className={classes.chicken} />
         <PngImg image={coffee} alt="coffee" className={classes.coffee} />
         <PngImg image={fruit} alt="fruit" className={classes.fruit} />
         <PngImg image={noodles} alt="noodles" className={classes.noodles} />

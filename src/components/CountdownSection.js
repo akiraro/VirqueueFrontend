@@ -27,7 +27,10 @@ const styles = theme => ({
   title: {
     textTransform: "uppercase",
     color: "#fff",
-    textAlign: "center"
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2.5rem"
+    }
   },
   date: {
     color: "#888"
@@ -172,18 +175,19 @@ class CountdownSection extends Component {
     return (
       <div className={classes.root} id={id}>
         <Hidden xsDown>
-          <Typography variant="h3" className={classes.title} gutterBottom>
+          <Typography variant="h2" className={classes.title} gutterBottom>
             Join our Alpha App Launch
           </Typography>
-          <Typography variant="h5" className={classes.date}>
+          <Typography variant="h4" className={classes.date}>
             01-12-2018
           </Typography>
         </Hidden>
         <Hidden smUp>
-          <Typography variant="h5" className={classes.title} gutterBottom>
-            Join our Alpha App Launch
+          <Typography className={classes.title} gutterBottom>
+            Join our Alpha <br />
+            App Launch
           </Typography>
-          <Typography variant="h6" className={classes.date}>
+          <Typography variant="h4" className={classes.date}>
             01-12-2018
           </Typography>
         </Hidden>

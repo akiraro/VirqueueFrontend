@@ -11,7 +11,8 @@ const styles = theme => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    position: "relative"
+    position: "relative",
+    height: "100vh"
   },
   navBar: {
     margin: "auto",
