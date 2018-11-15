@@ -52,8 +52,8 @@ const styles = theme => ({
     width: "100%"
   },
   close: {
-    height: "2rem",
-    width: "2rem",
+    height: "4rem",
+    width: "4rem",
     cursor: "pointer"
   },
   title: {
@@ -63,10 +63,10 @@ const styles = theme => ({
   desc: {
     marginBottom: "2rem",
     textAlign: "center",
-    width: "60%"
+    width: "80%"
   },
   formAction: {
-    width: "60%",
+    width: "80%",
     margin: "1rem 0"
   },
   success: {
@@ -99,7 +99,7 @@ class Apply extends Component {
     email: "",
     nameError: false,
     emailError: false,
-    snackbar: false,
+    snackbar: true,
     dialog: false,
     status: "",
     message: ""
@@ -220,11 +220,11 @@ class Apply extends Component {
         </div>
 
         <form onSubmit={this.handleSubmit} className={classes.form}>
-          <Typography className={classes.title} variant="h4">
+          <Typography className={classes.title} variant="h3">
             early sign up
             <div className={classes.divider} />
           </Typography>
-          <Typography className={classes.desc} variant="body1">
+          <Typography className={classes.desc} variant="h6">
             The app is currently in alpha stage and we need your help. Sign up
             and be the first ones to experience the smartest way to order food.
           </Typography>
@@ -258,7 +258,7 @@ class Apply extends Component {
           >
             Submit
           </Button>
-          <Typography className={classes.desc} variant="body1">
+          <Typography className={classes.desc} variant="h6">
             We will notify you via email. Stay tuned!
           </Typography>
         </form>

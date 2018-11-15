@@ -193,7 +193,7 @@ class Header extends Component {
           id={id}
           style={{
             backgroundColor: backgroundColor,
-            zIndex: -999
+            zIndex: 0
           }}
         >
           <div className={classes.navbar}>
