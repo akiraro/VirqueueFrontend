@@ -11,6 +11,7 @@ class App extends Component {
   viewSection = id => () => {
     document.getElementById(id).scrollIntoView();
   };
+  //Test//
   render() {
     const header = (
       <div>
