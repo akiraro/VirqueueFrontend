@@ -16,4 +16,4 @@ pipelines:
           - python get-pip.py
           - pip install awsebcli --upgrade
           - eb init Virqueue -r ap-southeast-1 -p node.js
-          - eb deploy master
+          - eb deploy Virqueue
