@@ -99,7 +99,7 @@ class Apply extends Component {
     email: "",
     nameError: false,
     emailError: false,
-    snackbar: true,
+    snackbar: false,
     dialog: false,
     status: "",
     message: ""
