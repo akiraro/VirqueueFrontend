@@ -15,5 +15,5 @@ pipelines:
           - curl -O https://bootstrap.pypa.io/get-pip.py
           - python get-pip.py
           - pip install awsebcli --upgrade
-          - eb init Virqueue -r ap-southeast-1 -p Node
+          - eb init Virqueue -r ap-southeast-1 -p nodejs
           - eb deploy
