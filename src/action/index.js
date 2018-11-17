@@ -19,7 +19,7 @@ export function signUpUser(data) {
     })
     .catch(err => {
       const error = {
-        message: err.response.data.Message,
+        message: err.response.data.message,
         status: err.response.status
       };
       return error;

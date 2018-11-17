@@ -109,8 +109,8 @@ class Apply extends Component {
     e.preventDefault();
     const { name, email } = this.state;
     const data = {
-      uname: name,
-      uemail: email
+      uname: name.toUpperCase(),
+      uemail: email.toLowerCase()
     };
     signUpUser(data).then(res => {
       if (res) {
@@ -119,14 +119,15 @@ class Apply extends Component {
           message: res.message,
           snackbar: true
         });
-        if (res.status !== 200)
-          setTimeout(
-            () =>
-              this.setState({
-                snackbar: false
-              }),
-            3000
-          );
+        setTimeout(
+          () =>
+            this.setState({
+              status: "",
+              message: "",
+              snackbar: false
+            }),
+          3000
+        );
       }
     });
   };
@@ -144,7 +145,9 @@ class Apply extends Component {
       snackbar: false,
       status: "",
       name: "",
-      email: ""
+      email: "",
+      nameError: false,
+      emailError: false
     });
   };
 
