@@ -12,7 +12,7 @@ const styles = theme => ({
     alignItems: "center",
     margin: "2rem 5rem",
     [theme.breakpoints.down("xs")]: {
-      flexDirection: "column-reverse",
+      flexDirection: "column",
       justifyContent: "center",
       margin: "2rem"
     }

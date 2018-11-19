@@ -149,7 +149,7 @@ const styles = theme => ({
   buttonContainer: {
     width: "100%",
     display: "flex",
-    marginBottom: "2rem",
+    margin: "0 0.5px 2rem",
     justifyContent: "space-between",
     [theme.breakpoints.down("sm")]: {
       width: "450px",

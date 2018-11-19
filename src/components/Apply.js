@@ -78,10 +78,14 @@ const styles = theme => ({
   snackbar: {
     position: "absolute",
     top: 0,
+    left: 0,
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    padding: "0.3rem 0"
+    padding: "0.3rem 0",
+    [theme.breakpoints.down("sm")]: {
+      position: "fixed"
+    }
   },
   dialog: {
     height: "217vw"
@@ -178,13 +182,13 @@ class Apply extends Component {
       return !isEmpty(props.status) ? (
         props.status === 200 ? (
           <div className={classNames(classes.success, props.className)}>
-            <Typography variant="subtitle2" style={{ color: "white" }}>
+            <Typography variant="subtitle1" style={{ color: "white" }}>
               {props.message}
             </Typography>
           </div>
         ) : (
           <div className={classNames(classes.error, props.className)}>
-            <Typography variant="subtitle2" style={{ color: "white" }}>
+            <Typography variant="subtitle1" style={{ color: "white" }}>
               {props.message}
             </Typography>
           </div>
@@ -233,6 +237,7 @@ class Apply extends Component {
           </Typography>
           <TextField
             error={nameError}
+            placeholder="Your Full Name"
             name="name"
             className={classes.formAction}
             variant="outlined"
@@ -243,6 +248,7 @@ class Apply extends Component {
           />
           <TextField
             error={emailError}
+            placeholder="Your Email"
             name="email"
             type="email"
             className={classes.formAction}
@@ -269,7 +275,7 @@ class Apply extends Component {
     );
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="apply">
         {button}
         <Dialog
           open={dialog}
